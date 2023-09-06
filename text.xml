@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
+    <Play>http://demo.twilio.com/docs/classic.mp3</Play>
     <Gather numDigits="1" action="/handle-key" method="POST">
         <Say>
             Press 1 for a greeting message, 2 to leave a message, or 3 for another option.
