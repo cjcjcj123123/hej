@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say voice="woman">Wilmer you are a big king, wilmer is a legend!</Say>
+    <Say voice="woman">wilmer is a big king, wilmer is a legend</Say>
     <Play>http://demo.twilio.com/docs/classic.mp3</Play>
-    <Gather numDigits="1" action="/handle-key" method="POST">
-        <Say
-
-
+</Response>
