@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say>Hello, this is a Twilio voice call.</Say>
-    <Gather input="dtmf" timeout="10" numDigits="1">
-       <Say>Please press 1 for sales or 2 for support.</Say>
-    </Gather>
+    <Say>Hello, this is a Twilio voice call you suck dick.</Say>
 </Response>
