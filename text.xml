@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
-    <Say voice="woman">wilmer is a big king and a legend</Say>
-    <Play>http://demo.twilio.com/docs/classic.mp3</Play>
+    <Gather numDigits="1" action="/handle-key" method="POST">
+        <Say voice="Polly.Joanna">Press 1 if you want to hear a legendary message.</Say>
+    </Gather>
+    <!-- If there's no user input or an invalid input, redirect to the beginning -->
+    <Redirect>/</Redirect>
 </Response>
