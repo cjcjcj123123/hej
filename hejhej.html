@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <div id="chatbox">
+        <div class="message">Chatbot: Hello! How can I assist you today?</div>
+    </div>
+    <input type="text" id="userInput" placeholder="Type your message here...">
+    <button id="sendMessage">Send</button>
+    <script>
+        document.getElementById('sendMessage').addEventListener('click', function () {
+            var userInput = document.getElementById('userInput').value;
+            document.getElementById('userInput').value = '';
+            var chatbox = document.getElementById('chatbox');
+            var userMessage = document.createElement('div');
+            userMessage.className = 'message';
+            userMessage.innerHTML = 'You: ' + userInput;
+            chatbox.appendChild(userMessage);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/chat', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function () {
+                var chatbotResponse = document.createElement('div');
+                chatbotResponse.className = 'message';
+                chatbotResponse.innerHTML = 'Chatbot: ' + JSON.parse(xhr.responseText).response;
+                chatbox.appendChild(chatbotResponse);
+            };
+            xhr.send('user_input=' + userInput);
+        });
+    </script>
+</body>
+</html>
